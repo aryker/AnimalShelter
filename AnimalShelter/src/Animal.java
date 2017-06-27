@@ -8,7 +8,21 @@ public class Animal {
 	private String color;
 	
 	public Animal(String n, String t, int a, boolean v, boolean f, String c) {
-		
+		setName(n);
+		setType(t);
+		setAge(a);
+		setVacc(v);
+		setFixed(f);
+		setColor(c);
+	}
+	
+	public Animal() {
+		setName("");
+		setType("");
+		setAge(-1);
+		setVacc(false);
+		setFixed(false);
+		setColor("");
 	}
 	
 	public void setName(String n) {
@@ -38,6 +52,26 @@ public class Animal {
 	
 	public String getName() {
 		return name;
+	}
+	
+	public String getType() {
+		return type;		
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public boolean getVacc() {
+		return vaccinated;
+	}
+	
+	public boolean getFixed() {
+		return fixed; 
+	}
+	
+	public String getColor() {
+		return color;
 	}
 
 }
