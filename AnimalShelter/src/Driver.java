@@ -175,7 +175,17 @@ public class Driver {
 	 * this later.
 	 */
 	public static void matchAnimals() {
-		//TODO: Implement this.		
+		System.out.println("Type: ");
+		String type = reader.nextLine();
+		for(int i = 0; i < sam.getlength; i++){
+		if(animal.getType().equals("dog") && type.equals("dog")){
+			System.out.println(animal.getName());
+		}
+		if(animal.getType().equals("fish") && type.equals("fish")){
+			System.out.println(animal.getName());
+		}
+		}
+
 	}
 	
 	/**
