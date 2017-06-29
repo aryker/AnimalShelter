@@ -219,7 +219,7 @@ public class Driver {
 	public static void matchAnimals() {
 		System.out.println("Type: ");
 		String type = reader.nextLine();
-		for(int i = 0; i < sam.getlength; i++){
+		for(int i = 0; i < sam.length; i++){
 		if(animal.getType().equals("dog") && type.equals("dog")){
 			System.out.println(animal.getName());
 		}
