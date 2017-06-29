@@ -111,6 +111,27 @@ public class Driver {
 		System.out.println("Type: ");
 		String type = reader.nextLine();
 		
+		if(type.equalsIgnoreCase("Dog")){
+			System.out.println("Breed: ");
+			String Breed = reader.nextLine();
+			
+			System.out.println("Cuteness(1 to 10): ");
+			String Cuteness = reader.nextLine();
+			
+			System.out.println("Tags(y/n)?: ");
+			String Tags = reader.nextLine();
+		}
+		
+		if(type.equalsIgnoreCase("Fish")){
+			System.out.println("Length(inch): ");
+			String Length = reader.nextLine();
+			
+			System.out.println("Saltwater(y/n)?: ");
+			String Saltwater = reader.nextLine();
+			
+			System.out.println("Scales(y/n)?: ");
+			String Scales = reader.nextLine();
+		}
 		//Ask the user for the animal's age.
 		System.out.println("Age: ");
 		int age = reader.nextInt();
