@@ -119,6 +119,27 @@ public class Driver {
 		System.out.println("Type: ");
 		String type = reader.nextLine();
 		
+		if(type.equalsIgnoreCase("Dog")){
+			System.out.println("Breed: ");
+			String Breed = reader.nextLine();
+			
+			System.out.println("Cuteness(1 to 10): ");
+			String Cuteness = reader.nextLine();
+			
+			System.out.println("Tags(y/n)?: ");
+			String Tags = reader.nextLine();
+		}
+		
+		if(type.equalsIgnoreCase("Fish")){
+			System.out.println("Length(inch): ");
+			String Length = reader.nextLine();
+			
+			System.out.println("Saltwater(y/n)?: ");
+			String Saltwater = reader.nextLine();
+			
+			System.out.println("Scales(y/n)?: ");
+			String Scales = reader.nextLine();
+		}
 		//Ask the user for the animal's age.
 		System.out.println("Age: ");
 		int age = reader.nextInt();
@@ -196,7 +217,17 @@ public class Driver {
 	 * this later.
 	 */
 	public static void matchAnimals() {
-		//TODO: Implement this.		
+		System.out.println("Type: ");
+		String type = reader.nextLine();
+		for(int i = 0; i < sam.getlength; i++){
+		if(animal.getType().equals("dog") && type.equals("dog")){
+			System.out.println(animal.getName());
+		}
+		if(animal.getType().equals("fish") && type.equals("fish")){
+			System.out.println(animal.getName());
+		}
+		}
+
 	}
 	
 	/**
