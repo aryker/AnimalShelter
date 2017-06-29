@@ -21,12 +21,20 @@ public class Driver {
 	 														 * because we don't yet know any information about the animal
 	 														 * we are creating. This allows us to avoid any Null Pointer
 	 														 * Exceptions in our program.*/
-	
+	private static Animal [] sam = new Animal[10];
 	/* This is the main method. Every Java program requires a main method to
 	 * run. When you click the 'Run' button in Eclipse, code will start being
 	 * executed on the first line of the main method. 
 	 * */
 	public static void main(String[] args) {
+		
+		
+		
+		for(int i=0; i < 10; i++) {
+			sam[i] = new Animal();
+			
+			
+			}
 		
 		/* We want our program to run until the user exits, so we create
 		 * a while loop with the 'true' condition. Remember that a while
@@ -45,7 +53,7 @@ public class Driver {
 			
 			/* Next we need to find out what menu option the user chose
 			 * and call the appropriate method based on that choice. To
-			 * do this, we use an if...elseif...else block to evaluate
+			 * do this, we use an if...else if...else block to evaluate
 			 * the user's choice. */
 			if(choice == 1) {
 				// Option 1 is to store an animal
@@ -160,12 +168,25 @@ public class Driver {
 	 * the + sign in our print statements.
 	 */
 	public static void retrieveAnimal() {
-		System.out.println("Name: " + animal.getName());
-		System.out.println("Type: " + animal.getType());
-		System.out.println("Age: " + animal.getAge());
-		System.out.println("Vaccinated: " + animal.getVacc());
-		System.out.println("Fixed: " + animal.getFixed());
-		System.out.println("Color: " + animal.getColor());
+		System.out.println("Which animal would you like? (enter a name)");
+		reader.nextLine();
+		
+		String name= reader.nextLine();
+		
+		Animal a = animal;
+		for(int i = 0; i<sam.length; i++) {
+			if(sam[i].getName().equals(name)){
+				System.out.println("Found a match");
+				a = sam[i];
+			}
+		}
+		
+		System.out.println("Name: " + a.getName());
+		System.out.println("Type: " + a.getType());
+		System.out.println("Age: " + a.getAge());
+		System.out.println("Vaccinated: " + a.getVacc());
+		System.out.println("Fixed: " + a.getFixed());
+		System.out.println("Color: " + a.getColor());
 	}
 	
 	/**
